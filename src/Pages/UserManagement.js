@@ -114,7 +114,8 @@ const [users, setUsers] = useState([]);
       <p class="solid"> <strong>Name:</strong> TerraForge Chronicles: Nexus Dawn</p>
        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>

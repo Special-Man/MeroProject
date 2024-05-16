@@ -14,6 +14,7 @@ import UserDelete from './Pages/UserManagement/UserDelete';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import EditUser from './Pages/UserManagement/EditUser';
+import Movie from './Pages/Movie';
 
 
 
@@ -29,9 +30,11 @@ const App = () => {
  {/* <Layout/> */}
  <BrowserRouter>
         <Routes>
+        <Route path="/" element={<Login/> } />
           <Route path="/" element={<Layout/>}>
             <Route path="/Pages/UserManagement" element={<PrivateRoute component={UserManagement}/>} />
             <Route path="/Pages/AddUser" element={ < PrivateRoute component={AddUser}/>} />
+            <Route path="/Movie" element={<Movie/>} />
 
             <Route path="/Pages/Faq" element={<Faq/>} />
             <Route path="/Pages/Contact" element={<Contact/>} />
@@ -43,7 +46,7 @@ const App = () => {
 
 
           </Route>
-          <Route path="/Pages/Login" element={<Login/> } />
+          
                   
         </Routes>
       </BrowserRouter>

@@ -40,7 +40,7 @@ setErrorMessage("This username or password is incorrect. YOU SHALL NOT PASS!");
 useEffect(() => {
     const isLogin = localStorage.getItem('isLogin');
     if(isLogin === '1'){
-        navigate('/Pages/UserManagement');
+        navigate('/');
         console.log("Login component Mounted");
     }
 },[])

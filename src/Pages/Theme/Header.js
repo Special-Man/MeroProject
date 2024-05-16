@@ -8,7 +8,7 @@ const Header = () =>{
   
     alert("logout");
     localStorage.removeItem('isLogin');
-    navigate('/Login')
+    navigate('/')
   }
     return(
       
