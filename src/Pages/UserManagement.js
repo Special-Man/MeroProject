@@ -107,12 +107,12 @@ const [users, setUsers] = useState([]);
         <div class="boxy">
     <div class="center">
     <div>
-      <img className="posters" src="../cover.jpg"></img>
+      <img className="posters" src="../445edge.jpg"></img>
       </div>
     <div>
       
-      <p class="solid"> <strong>Name:</strong> TerraForge Chronicles: Nexus Dawn</p>
-       <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
+      <p class="solid"> <strong>Name:</strong> Edge of Tomorrow</p>
+       <p class="solid"><strong>Genre:</strong> Action, Sci-fi</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
         <Link to="/Movie">
          <button class="accordion" >Watch Now!</button></Link>
@@ -129,7 +129,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> The Lost Temple 2: Anthrolopogia</p>
         <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -143,7 +144,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> Godzilla x Kong: The New Empire</p>
         <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -157,7 +159,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> Dune: Part Two</p>
         <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong>Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -173,7 +176,8 @@ const [users, setUsers] = useState([]);
       <p class="solid"> <strong>Name:</strong> The Batman</p>
        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -187,7 +191,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> Superman</p>
         <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -201,7 +206,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> The Man from Oblivexia</p>
         <p class="solid"><strong>Genre:</strong> Drama, Suspense</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -217,7 +223,8 @@ const [users, setUsers] = useState([]);
     <div><p class="solid"> <strong>Name:</strong> Scarlet-Spider: Part Two</p>
         <p class="solid"><strong>Genre:</strong> Action, Suspense</p>
         <p class="solid"><strong>Medium:</strong>Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>

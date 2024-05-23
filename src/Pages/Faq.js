@@ -1,3 +1,11 @@
+import {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
+import ViTable from "../components/ViTable";
+import axios from "axios";
+import { v4 as uuidv4 } from 'uuid';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 const Faq= () => {
     return(
         <div>
@@ -15,7 +23,8 @@ const Faq= () => {
       <p class="solid"> <strong>Name:</strong> TerraForge Chronicles: Nexus Dawn</p>
        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+         <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -29,7 +38,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> The Lost Temple 2: Anthrolopogia</p>
         <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+         <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -44,7 +54,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> Godzilla x Kong: The New Empire</p>
         <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -59,7 +70,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> Dune: Part Two</p>
         <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong>Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -75,7 +87,8 @@ const Faq= () => {
       <p class="solid"> <strong>Name:</strong> The Batman</p>
        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+         <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -89,7 +102,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> Superman</p>
         <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -103,7 +117,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> The Man from Oblivexia</p>
         <p class="solid"><strong>Genre:</strong> Drama, Suspense</p>
         <p class="solid"><strong>Medium:</strong> Movie</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+         <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
@@ -119,7 +134,8 @@ const Faq= () => {
     <div><p class="solid"> <strong>Name:</strong> Scarlet-Spider: Part Two</p>
         <p class="solid"><strong>Genre:</strong> Action, Suspense</p>
         <p class="solid"><strong>Medium:</strong>Movie</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
+        <Link to="/Movie">
+         <button class="accordion" >Watch Now!</button></Link>
         </div>
     </div>
     </div>
