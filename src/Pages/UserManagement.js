@@ -21,7 +21,7 @@ const movies = [
   },
   {
     id: 'movie-uuid-3',
-    name: 'The Lost Temple 2: Anthrolopogia',
+    name: 'Anthrolopogia',
     genre: 'Action, Thriller',
     medium: 'Movie',
     image: '../cover5.jpg'

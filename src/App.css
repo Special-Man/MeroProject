@@ -334,8 +334,8 @@ color: white;
     overflow: hidden;
   } */
   img {
-    display: block;
-    margin-left: auto;
+    
+  
     margin-right: auto;
   }
   
@@ -360,3 +360,27 @@ color: white;
   .active, .insta:hover {
     background-color: red; 
   }
+  /* footer */
+
+  .footer-img{
+    width: auto;
+    height: 50px;
+    
+
+  }
+
+  .footing{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+
+  }
+/* 
+  footer{
+    width: 100%;
+    height: auto;
+  } */
+
+ 
