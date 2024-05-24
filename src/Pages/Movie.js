@@ -1,27 +1,40 @@
-// import video from '../Edge1.mp4';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
-const Movie= () => {
+const trailers = {
+  'movie-uuid-1': 'https://www.youtube.com/watch?v=48yIy_p3-vQ',
+  'movie-uuid-2': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Example URL for testing
+  'movie-uuid-3': 'https://www.youtube.com/watch?v=GIAn5zDtI10'
+};
 
-    return(
-        <div>
-             <h2>Movie1:-</h2>
-             {/* <video width ="1100" src="../Edge1.mp4"/> */}
+const Movie = () => {
+  const { id } = useParams();
+  const [trailerUrl, setTrailerUrl] = useState('');
 
-             {/* <video width ="1100" controls> 1st battle: https://www.youtube.com/watch?v=eWH2w-LUVc0
-             <source src={video} type ="video/mp4"/> trailer: https://www.youtube.com/watch?v=vw61gCe2oqI
-             </video> */}
-             <ReactPlayer
-             controls={true}
-             url={'https://www.youtube.com/watch?v=48yIy_p3-vQ'}
-             width={1100}
-             height={650}
-             />
+  useEffect(() => {
+    setTrailerUrl(trailers[id] || '');
+  }, [id]);
 
-             {/* <ReactPlayer controls={true} width ="1100" src="../Edge1.mp4"/> */}
+  useEffect(() => {
+    console.log('Current Trailer URL:', trailerUrl); // Debugging line to ensure URL is set correctly
+  }, [trailerUrl]);
 
+  return (
+    <div>
+      <h2>Movie:-</h2>
+      {trailerUrl ? (
+        <ReactPlayer
+          controls={true}
+          url={trailerUrl}
+          width="1100px"
+          height="650px"
+        />
+      ) : (
+        <p>Trailer not available</p>
+      )}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
 export default Movie;

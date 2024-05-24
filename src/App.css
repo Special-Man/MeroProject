@@ -32,7 +32,7 @@ body{
   display: flex;
   /* hieght: 800px */
   /* hieght: 1250px; */
-    height:1250px;
+    height:auto;
     width:20%;
     padding: 20px;
     color: white;
@@ -286,17 +286,24 @@ color: white;
     /* border: rgb(0, 0, 0);
     border-width:  119px; */
     /* background-color: rgba(255, 255, 255, 0.781); */
-    width: 260px;
-    margin: 10px;
+ 
     /* max-height: 610px;
     min-height: 610px; */
     padding-top: 5px;
     padding-left: 0px;
     padding-right: 10px;
     padding-bottom: 10px;
+    width: 260px;
+    margin: 10px;
+    /* float: left;   */
+
     /* border:rgb(0, 0, 0); */
     /* border-style: solid; */
-    float: left;  
+    }
+
+    .flex-box{
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .accordion {
