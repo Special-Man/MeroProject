@@ -15,6 +15,8 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import EditUser from './Pages/UserManagement/EditUser';
 import Movie from './Pages/Movie';
+import Series from './Pages/Series';
+import About from './Pages/About';
 
 
 
@@ -35,10 +37,15 @@ const App = () => {
             <Route path="/Pages/UserManagement" element={<PrivateRoute component={UserManagement}/>} />
             <Route path="/Pages/AddUser" element={ < PrivateRoute component={AddUser}/>} />
             <Route path="/Movie/:id" element={<Movie/>} />
+            <Route path="/Series/:id" element={<Series/>} />
+
 
             <Route path="/Pages/Faq" element={<Faq/>} />
             <Route path="/Pages/Contact" element={<Contact/>} />
             <Route path="/Pages/Detail/:id" element={<Detail/>} />
+
+            <Route path="/Pages/About" element={<About/>} />
+
 
             <Route path="/UserManagement/UserDelete/:id" element={<UserDelete/>} />
             <Route path="/UserManagement/EditUser/:id" element={<EditUser/>} />

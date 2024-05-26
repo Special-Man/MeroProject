@@ -13,19 +13,28 @@ const movies = [
     image: '../445edge.jpg'
   },
   {
-    id: 'movie-uuid-2',
+    id: 'movie-uuid-3',
     name: 'The Lost Temple 2: Anthrolopogia',
     genre: 'Action, Thriller',
     medium: 'Movie',
     image: '../cover4.jpg'
   },
   {
-    id: 'movie-uuid-3',
-    name: 'Anthrolopogia',
+    id: 'movie-uuid-12',
+    name: 'Deadpool & Wolverine',
+    genre: 'Action, Comedy',
+    medium: 'Movie',
+    image: '../dead.png'
+  },
+  {
+    id: 'movie-uuid-7',
+    name: 'The Batman',
     genre: 'Action, Thriller',
     medium: 'Movie',
-    image: '../cover5.jpg'
-  }
+    image: '../batman.jpg'
+  },
+
+  
 ];
 const UserManagement= () => {
 
@@ -64,6 +73,8 @@ const UserManagement= () => {
         ))}
 
     </div>
+
+  
 
     
 

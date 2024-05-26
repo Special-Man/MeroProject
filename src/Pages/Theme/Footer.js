@@ -6,7 +6,7 @@ const Footer = () => {
             
         <div class="footer">
 <div class="row">
-<img class="img"src="../logo192.png"/>
+<img class="img"src="../Virinchipng.png"/>
 <a href="#"><i class="fa fa-instagram"></i></a>
 <a href="#"><i class="fa fa-youtube"></i></a>
 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -18,12 +18,12 @@ const Footer = () => {
 <li><a href="#">Our Services</a></li>
 <li><a href="#">Privacy Policy</a></li>
 <li><a href="#">Terms & Conditions</a></li>
-<li><a href="#">Career</a></li>
+<li><a href="#">About</a></li>
 </ul>
 </div>
 
 <div class="row">
-INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By: Mahesh 
+INFERNO Copyright © 2024 Inferno - All rights reserved || Designed By: Bishesh Shakya 
 </div>
 </div>
             

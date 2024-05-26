@@ -1,149 +1,135 @@
-import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import ViTable from "../components/ViTable";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
 
+const movies = [
+  {
+    id: 'movie-uuid-3',
+    name: 'Deadpool & Wolverine',
+    genre: 'Action, Comedy',
+    medium: 'Movie',
+    image: '../dead.png'
+  },
+ 
+  {
+    id: 'movie-uuid-1',
+    name: 'Edge of Tomorrow',
+    genre: 'Action, Sci-fi',
+    medium: 'Movie',
+    image: '../445edge.jpg'
+  },
+  {
+    id: 'movie-uuid-4',
+    name: 'Godzilla x Kong',
+    genre: 'Action, Entertainment',
+    medium: 'Movie',
+    image: '../gxk.png'
+  },
+  {
+    id: 'movie-uuid-5',
+    name: 'Dune 2',
+    genre: 'Action, Thriller',
+    medium: 'Movie',
+    image: '../dune2.jpg'
+  },
+  {
+    id: 'movie-uuid-12',
+    name: 'Deadpool',
+    genre: 'Action, Rom-Com',
+    medium: 'Movie',
+    image: '../dead1.jpg'
+  },
+  {
+    id: 'movie-uuid-7',
+    name: 'The Batman',
+    genre: 'Suspense, Thriller',
+    medium: 'Movie',
+    image: '../batman.jpg'
+  },
+  {
+    id: 'movie-uuid-9',
+    name: 'Transformers: Dark of the Moon',
+    genre: 'Action, Entertainment',
+    medium: 'Movie',
+    image: '../tf3.jpg'
+  },
+  {
+    id: 'movie-uuid-11',
+    name: 'Spider-Man',
+    genre: 'Action, Entertainment',
+    medium: 'Movie',
+    image: '../spidey.jpg'
+  },
+  {
+    id: 'movie-uuid-10',
+    name: 'The Amazing Spider-Man 2',
+    genre: 'Action, Entertainment',
+    medium: 'Movie',
+    image: '../tasm2.jpg'
+  },
+  
+  {
+    id: 'movie-uuid-2',
+    name: 'The Lost Temple 2: Anthrolopogia',
+    genre: 'Adventure, Mystery',
+    medium: 'Movie',
+    image: '../cover4.jpg'
+  },
+  {
+    id: 'movie-uuid-8',
+    name: 'Battlefield: 2042',
+    genre: 'Action, Thriller',
+    medium: 'Movie',
+    image: '../battle42.jpg'
+  },
+];
 const Faq= () => {
+
+  
+  const uuid = uuidv4();
+  console.log(uuid);
+
     return(
         <div>
-        <h2>Movies:-</h2>
-        {/* <h3>FAQ fullform is Fast and Qurious I decided..</h3> */}
+        <h2>Movies & Series:-</h2>
+        
+        
+        {/* <Link className="adser" to="/Pages/AddUser">Add User here.</Link> */}
 
-{/* THis is for: 1 */}
-<div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover.jpg"></img>
-      </div>
-    <div>
-      
-      <p class="solid"> <strong>Name:</strong> TerraForge Chronicles: Nexus Dawn</p>
-       <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-         <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
+        <h3>Latest:-</h3>
+        {/* New card 1 */}
+        
+<div class="flex-box">
 
-  {/* THis is for: 1.5 */}
-  <div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover4.jpg"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> The Lost Temple 2: Anthrolopogia</p>
-        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-         <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
+{movies.map(movie => (
+          <div key={movie.id} className="boxy">
+            <div className="center flex">
+              <div>
+                <img className="posters" src={movie.image} alt={movie.name} />
+              </div>
+              <div>
+                <p className="solid"><strong>Name:</strong> {movie.name}</p>
+                <p className="solid"><strong>Genre:</strong> {movie.genre}</p>
+                <p className="solid"><strong>Medium:</strong> {movie.medium}</p>
+                <Link to={`/Movie/${movie.id}`}>
+                  <button className="accordion">Watch Now!</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
 
-    {/* THis is for: 2 */}
-    <div class="boxy">
-    <div class="center">
-    <div>
-    <img className="posters" src="../gxk.png"></img>
-
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Godzilla x Kong: The New Empire</p>
-        <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-        <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
-
-  {/* THis is for: 3 */}
-  <div class="boxy">
-    <div class="center">
-    <div>
-    <img className="posters" src="../dune2.jpg"></img>
-
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Dune: Part Two</p>
-        <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
-        <p class="solid"><strong>Medium:</strong>Movie</p>
-        <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
-{/* _________________________________________________2ND_LINE_________________________________________________________________________ */}
-    {/* THis is for: 1 */}
-    <div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../batman.jpg"></img>
-      </div>
-    <div>
-      
-      <p class="solid"> <strong>Name:</strong> The Batman</p>
-       <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-         <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
-
-     {/* THis is for: 2 */}
-     <div class="boxy">
-    <div class="center">
-    <div>
-    <img className="posters" src="../superman.png"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Superman</p>
-        <p class="solid"><strong>Genre:</strong> Action, Entertainment</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-        <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
-
-  {/* THis is for: 1.5 */}
-  <div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover2.jpg"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> The Man from Oblivexia</p>
-        <p class="solid"><strong>Genre:</strong> Drama, Suspense</p>
-        <p class="solid"><strong>Medium:</strong> Movie</p>
-         <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
     </div>
 
     
 
-    {/* THis is for: 3 */}
-    <div class="boxy">
-    <div class="center">
-    <div>
-    <img className="posters" src="../ScarletSpider.jpg"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Scarlet-Spider: Part Two</p>
-        <p class="solid"><strong>Genre:</strong> Action, Suspense</p>
-        <p class="solid"><strong>Medium:</strong>Movie</p>
-        <Link to="/Movie">
-         <button class="accordion" >Watch Now!</button></Link>
-        </div>
-    </div>
-    </div>
-
-        {/* YEs! */}
+             {/* YES!!! */}
         </div>
 
     );
 };
+
 
 export default Faq;

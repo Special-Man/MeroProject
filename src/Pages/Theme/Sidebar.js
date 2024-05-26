@@ -24,6 +24,12 @@ const Sidebar = () => {
                     <a>Series</a>
                     </Link>
             </li>
+
+            <li>
+            <Link to="/Pages/About">
+                    <a>About</a>
+                    </Link>
+            </li>
         </ul>
         </div>
 

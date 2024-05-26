@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import ViPassInput from "../components/ViPassInput";
 import ViTextInput from "../components/ViTextInput";
 import ViMessage from "../components/ViMessage";
+import Header from "./Theme/Header";
+import {Outlet} from "react-router-dom";
 
 
 const Login = () => {
@@ -25,7 +27,7 @@ const Login = () => {
     }
     const doLogin = (e) => {
       let isLogin = false;
-      if(email === "admin" && password === "admin") {
+      if(email === "Bishesh" && password === "admin") {
         isLogin = true;
       }
   
@@ -46,27 +48,41 @@ useEffect(() => {
 },[])
     return(
         <div>
-            <div class="box">
-            <h1>Login</h1>
+          <header> 
+        <div class="header1">
+        Mero Entertainment
+        {/* <div>
+          <img className="Logo" src={Virinchipng}/>
+        </div> */}
+      
+        </div> 
+        </header>
+
+          <div class="logbod">        
+          <Outlet/>
+{/* begin */}
+
+          <div class="box">
+            <h1>Login:</h1>
 
             <form method="post" action="index.html">
 
-<h1>Dashboard</h1>
+
 {errorMessage && <ViMessage message = {errorMessage}/>}
 
 <ViTextInput 
-        title="Email" 
+        title="Username: " 
         name="email" 
-        placeholder="Username"
+        placeholder="Your Username😀"
         class="email"
         handleInputChange={handleInputChange}
         value={email} />
 
 
 <ViPassInput 
-        title="Password" 
+        title="Password:  " 
         name="password" 
-        placeholder="Password"
+        placeholder="Your Password 🤐"
 
         handleInputChange={handleInputChange}
         class="email"
@@ -79,6 +95,11 @@ useEffect(() => {
 
 </form>
 </div>
+{/* End */}
+
+         </div>
+          
+            
         </div>
     )
 }

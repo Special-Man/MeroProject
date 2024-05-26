@@ -1,74 +1,77 @@
+import { Link } from "react-router-dom";
+import ViTable from "../components/ViTable";
+import axios from "axios";
+import { v4 as uuidv4 } from 'uuid';
+import { ToastContainer, toast } from 'react-toastify';
+
+const movies = [
+  {
+    id: 'movie-uuid-6',
+    name: 'Horse Rider: Edge of Time',
+    genre: 'Drama',
+    medium: 'Series',
+    image: '../cover2.jpg'
+  },
+  {
+    id: 'movie-uuid-2',
+    name: 'The Window: tahiroforia',
+    genre: 'Thriller',
+    medium: 'Series',
+    image: '../cover6.jpg'
+  },
+  {
+    id: 'movie-uuid-6',
+    name: 'Anthrolopogia',
+    genre: 'Action, Thriller',
+    medium: 'Series',
+    image: '../cover.jpg'
+  }
+];
 const Contact= () => {
+
+  
+  const uuid = uuidv4();
+  console.log(uuid);
+
     return(
         <div>
         <h2>Series:-</h2>
-        {/* <h3>616-1610-919</h3> */}
+        
+        
+        {/* <Link className="adser" to="/Pages/AddUser">Add User here.</Link> */}
 
-{/* THis is for: 1 */}
-<div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover3.jpg"></img>
-      </div>
-    <div>
-      
-      <p class="solid"> <strong>Name:</strong> I Dream in Another Language</p>
-       <p class="solid"><strong>Genre:</strong> Action, Thriller</p>
-        <p class="solid"><strong>Medium:</strong> Series</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
-        </div>
-    </div>
-    </div>
+        
+        {/* New card 1 */}
+        
+<div class="flex-box">
 
-  {/* THis is for: 1.5 */}
-  <div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover4.jpg"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> To the Ends of the Earth</p>
-        <p class="solid"><strong>Genre:</strong> Mystery</p>
-        <p class="solid"><strong>Medium:</strong> Series</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
-        </div>
-    </div>
+{movies.map(movie => (
+          <div key={movie.id} className="boxy">
+            <div className="center flex">
+              <div>
+                <img className="posters" src={movie.image} alt={movie.name} />
+              </div>
+              <div>
+                <p className="solid"><strong>Name:</strong> {movie.name}</p>
+                <p className="solid"><strong>Genre:</strong> {movie.genre}</p>
+                <p className="solid"><strong>Medium:</strong> {movie.medium}</p>
+                <Link to={`/Series/${movie.id}`}>
+                  <button className="accordion">Watch Now!</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+
     </div>
 
-    {/* THis is for: 2 */}
-    <div class="boxy">
-    <div class="center">
-    <div>
-    <img className="posters" src="../cover5.jpg"></img>
-
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Sorrow of Sadness</p>
-        <p class="solid"><strong>Genre:</strong> Drama</p>
-        <p class="solid"><strong>Medium:</strong> Series</p>
-        <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
-        </div>
-    </div>
-    </div>
-
-   {/* THis is for: 1.5 */}
-  <div class="boxy">
-    <div class="center">
-    <div>
-      <img className="posters" src="../cover6.jpg"></img>
-      </div>
-    <div><p class="solid"> <strong>Name:</strong> Looking through the Window</p>
-        <p class="solid"><strong>Genre:</strong> Drama, Suspense</p>
-        <p class="solid"><strong>Medium:</strong> Series</p>
-         <button class="accordion" onclick="document.location='http://localhost:8080/mero/mero4.jsp'">Watch Now!</button>
-        </div>
-    </div>
-    </div>
-{/* _________________________________________________2ND_LINE_________________________________________________________________________ */}
     
 
-        {/* YES! */}
+             {/* YES!!! */}
         </div>
 
     );
 };
+
 
 export default Contact;
