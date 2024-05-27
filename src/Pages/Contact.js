@@ -35,7 +35,7 @@ const Contact= () => {
 
     return(
         <div>
-        <h2>Series:-</h2>
+        <h2 className="title">Series:-</h2>
         
         
         {/* <Link className="adser" to="/Pages/AddUser">Add User here.</Link> */}
@@ -48,16 +48,20 @@ const Contact= () => {
 {movies.map(movie => (
           <div key={movie.id} className="boxy">
             <div className="center flex">
+
+            <Link to={`/Series/${movie.id}`}>
+                  <button>
               <div>
-                <img className="posters" src={movie.image} alt={movie.name} />
+                <img className="posters"  src={movie.image} alt={movie.name} />
               </div>
+              </button> 
+              </Link>
+
               <div>
                 <p className="solid"><strong>Name:</strong> {movie.name}</p>
                 <p className="solid"><strong>Genre:</strong> {movie.genre}</p>
                 <p className="solid"><strong>Medium:</strong> {movie.medium}</p>
-                <Link to={`/Series/${movie.id}`}>
-                  <button className="accordion">Watch Now!</button>
-                </Link>
+               
               </div>
             </div>
           </div>

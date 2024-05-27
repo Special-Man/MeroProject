@@ -25,7 +25,7 @@ const Series = () => {
 
   return (
     <div>
-      <h2>Series:-</h2>
+      <h2 className="title">Series:-</h2>
       {trailerUrl ? (
         <ReactPlayer
           controls={true}

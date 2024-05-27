@@ -25,7 +25,7 @@ const About = () => {
 
   return (
     <div>
-      <h2>About Mero Entertainment:-</h2>
+      <h2 className="title">About Mero Entertainment:-</h2>
       {trailerUrl ? (
         <ReactPlayer
           controls={true}

@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 const Sidebar = () => {
     return (
+        
         <div class="sidebar">
         <ul className ="sidebar-nav">
             <li>
@@ -31,7 +32,9 @@ const Sidebar = () => {
                     </Link>
             </li>
         </ul>
+        
         </div>
+        
 
     );
 };

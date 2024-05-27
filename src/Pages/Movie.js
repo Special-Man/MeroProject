@@ -13,7 +13,7 @@ const trailers = {
   'movie-uuid-8': 'https://www.youtube.com/watch?v=-YV9GYSrJZs',
   'movie-uuid-9': 'https://www.youtube.com/watch?v=-AR5X_Hk6IA',
   'movie-uuid-10': 'https://www.youtube.com/watch?v=WfV-0Yv5vNY',
-  'movie-uuid-11': 'https://www.youtube.com/watch?v=wz_-wornJwA',
+  'movie-uuid-11': 'https://www.youtube.com/watch?v=0u0QDy11rF8',
   'movie-uuid-12': 'https://www.youtube.com/watch?v=RP0K94bGNnA',
   'movie-uuid-13': '',
 
@@ -39,7 +39,7 @@ const Movie = () => {
 
   return (
     <div>
-      <h2>Movie :-</h2>
+      <h2 className="title">Movie :-</h2>
       {trailerUrl ? (
         <ReactPlayer
           controls={true}

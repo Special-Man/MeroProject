@@ -93,12 +93,12 @@ const Faq= () => {
 
     return(
         <div>
-        <h2>Movies & Series:-</h2>
+        <h2 className="title">Movies:-</h2>
         
         
         {/* <Link className="adser" to="/Pages/AddUser">Add User here.</Link> */}
 
-        <h3>Latest:-</h3>
+        <h3 className="title">All Movies:-</h3>
         {/* New card 1 */}
         
 <div class="flex-box">
@@ -106,16 +106,20 @@ const Faq= () => {
 {movies.map(movie => (
           <div key={movie.id} className="boxy">
             <div className="center flex">
+            <Link to={`/Movie/${movie.id}`}>
+                  <button>
               <div>
                 <img className="posters" src={movie.image} alt={movie.name} />
               </div>
+              </button> 
+              </Link>
               <div>
                 <p className="solid"><strong>Name:</strong> {movie.name}</p>
                 <p className="solid"><strong>Genre:</strong> {movie.genre}</p>
                 <p className="solid"><strong>Medium:</strong> {movie.medium}</p>
-                <Link to={`/Movie/${movie.id}`}>
+                {/* <Link to={`/Movie/${movie.id}`}>
                   <button className="accordion">Watch Now!</button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

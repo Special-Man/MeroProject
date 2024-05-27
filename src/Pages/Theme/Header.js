@@ -19,7 +19,8 @@ const Header = () =>{
         {/* <div>
           <img className="Logo" src={Virinchipng}/>
         </div> */}
-      <button class = "logout" onClick={logout}>Log Out</button>
+        
+      <button class = "logout" id="btn2" onClick={logout}>Log Out</button>
         </div> 
         </header>
         </div>
