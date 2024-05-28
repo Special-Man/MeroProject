@@ -20,7 +20,10 @@ body{
     padding: 40px;
     color: #e1e1e1;
     /* background-color:#d01110; */
-    background-color:#3c3c3c;
+    /* background-color:#3c3c3c; grey */
+    background-color:    #2a566f;
+
+ 
 
 
 }
@@ -282,13 +285,13 @@ transition:0.5s;
     width: 173px; 
     /* 400 by 260px; and 200 by 130px; 266.66/173.33*/
     box-shadow: #8d8d8d;
-    
+    transition: box-shadow 0.3s ease-in-out;
     
   }
- /* .boxy:hover{
-    color: rgb(255, 0, 0);
-    
-    } */
+ .posters:hover{
+    border: rgb(0, 0, 0) 3px solid;
+    box-shadow: 10px 10px 20px black;
+    }
 
 
 .title{

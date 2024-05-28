@@ -68,17 +68,14 @@ const UserManagement= () => {
           <div key={movie.id} className="boxy">
             <div className="center flex">
 
-            {/* <div class="m-auto overflow-hidden rounded-lg shadow-lg cursor-pointer h-90 w-60 md:w-80"> */}
-            {/* <div class="w-full p-4 bg-white dark:bg-red-800"> */}
-            {/* <p class="font-medium text-indigo-500 text-md">
-            </p>  */}
+            
             <Link to={`/Movie/${movie.id}`}>
-                  <button>
+                  
               <div>
               
                 <img className="posters"  src={movie.image} alt={movie.name} />
               </div>
-              </button> 
+              
               </Link>
               {/* </div> */}
               {/* </div> */}

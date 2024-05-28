@@ -107,11 +107,11 @@ const Faq= () => {
           <div key={movie.id} className="boxy">
             <div className="center flex">
             <Link to={`/Movie/${movie.id}`}>
-                  <button>
+                  
               <div>
                 <img className="posters" src={movie.image} alt={movie.name} />
               </div>
-              </button> 
+              
               </Link>
               <div>
                 <p className="solid"><strong>Name:</strong> {movie.name}</p>

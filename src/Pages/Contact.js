@@ -50,11 +50,11 @@ const Contact= () => {
             <div className="center flex">
 
             <Link to={`/Series/${movie.id}`}>
-                  <button>
+                
               <div>
                 <img className="posters"  src={movie.image} alt={movie.name} />
               </div>
-              </button> 
+             
               </Link>
 
               <div>
